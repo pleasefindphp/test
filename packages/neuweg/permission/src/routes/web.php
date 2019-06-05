@@ -20,11 +20,13 @@ Route::group([
 
     Route::get('departments', [ 'as' => 'modules.departments.index', 'uses' => 'DepartmentController@index' ]);
 
+    Route::get('departments/create', [ 'as' => 'modules.departments.create', 'uses' => 'DepartmentController@create' ]);
+
 });
 
 
 
- Route::get('departments/create', [ 'as' => 'admin.departments.create', 'uses' => 'DepartmentController@create' ]);
+
  Route::post('departments', [ 'as' => 'admin.departments.store', 'uses' => 'DepartmentController@store' ]);
  Route::get('departments/{id}', [ 'as' => 'admin.departments.show', 'uses' => 'DepartmentController@show' ]);
  Route::get('departments/{id}/edit', [ 'as' => 'admin.departments.edit', 'uses' => 'DepartmentController@edit' ]);

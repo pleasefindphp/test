@@ -1,13 +1,9 @@
 @extends('layouts.master')
 
 @section('pageBar')
-    <ul class="breadcrumb">
-        <li class="breadcrumb-item text-capitalize">
-            <h3>Departments</h3>
-        </li>
-        <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
-        <li class="breadcrumb-item"><a href="#">Departments</a></li>
-    </ul>
+    <div class="kt-subheader__main">
+        <h3 class="kt-subheader__title">Departments & designations</h3>
+    </div>
 @stop
 
 @section('content')
@@ -33,7 +29,7 @@
                                             class="btn btn-primary btn-rounded dataModel"
                                             type="button"
                                             data-id="#addpanel"
-                                            data-href="{{ route('admin.departments.create') }}"
+                                            data-href="{{ route('modules.departments.create') }}"
                                         >Add New
                                         </button>
                                         @endif
