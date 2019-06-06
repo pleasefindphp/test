@@ -31,13 +31,13 @@
 								</a>
 							</li>
 							<li class="kt-menu__item ">
-								<a href="" class="kt-menu__link ">
+								<a href="{{ route('modules.permissionGroups.index') }}" class="kt-menu__link ">
 									<i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
 									<span class="kt-menu__link-text">Permissions</span>
 								</a>
 							</li>
 							<li class="kt-menu__item ">
-								<a href="" class="kt-menu__link ">
+								<a href="{{ route('modules.departments.permission') }}" class="kt-menu__link ">
 									<i class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
 									<span class="kt-menu__link-text">Configurations</span>
 								</a>

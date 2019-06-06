@@ -176,6 +176,7 @@ return [
          */
         \Neuweg\Core\NeuwegCoreServiceProvider::class,
         \Neuweg\Permission\NeuwegPermissionServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -227,7 +228,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Html' => Collective\Html\HtmlFacade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
     ],
 
 ];

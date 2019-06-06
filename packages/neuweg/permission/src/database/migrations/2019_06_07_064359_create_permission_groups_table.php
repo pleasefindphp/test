@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class   CreateDepartmentsTable extends Migration
+class CreatePermissionGroupsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class   CreateDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('tag');
+        Schema::create('permission_groups', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name')->nullable();
+            $table->string('tag')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class   CreateDepartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('permission_groups');
     }
 }

@@ -27,6 +27,7 @@ class NeuwegCoreServiceProvider extends ServiceProvider
     public function boot() {
 
         include __DIR__.'/helpers.php';
+        include __DIR__.'/macros.php';
 
     }
 }

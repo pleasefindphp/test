@@ -56,3 +56,49 @@ if (! function_exists('isAuth')) {
     }
 
 };
+
+define('DATE_FORMAT', 'd-m-Y');
+
+define('DATETIME_FORMAT', 'd-m-Y g:i A');
+
+define('TIME_FORMAT', 'g:i A');
+
+if (! function_exists('getDateTimeValue')) {
+
+    function getDateTimeValue($date) {
+        if( in_array($date, ['0000-00-00', '0000-00-00 00:00:00']) || (!$date)) return '';
+        return date(DATETIME_FORMAT, strtotime($date));
+    }
+
+}
+
+if (! function_exists('getDateValue')) {
+
+    function getDateValue($date) {
+        if( in_array($date, ['0000-00-00', '0000-00-00 00:00:00']) || (!$date)) return '';
+        return date('d-m-Y', strtotime($date));
+    }
+
+}
+
+if (! function_exists('getTimeValue')) {
+
+    function getTimeValue($date) {
+        if( in_array($date, ['0000-00-00', '0000-00-00 00:00:00', '00:00:00']) || (!$date)) return '';
+        return date(TIME_FORMAT, strtotime($date));
+    }
+
+}
+
+if (! function_exists('cvalidate')) {
+
+    function cvalidate( $rules, $attrs = [] ) {
+
+        if(! count($attrs) ) $attrs = request()->all();
+        $validation = Validator::make( $attrs, $rules );
+        if(! $validation->fails() ) return false;
+        return $validation->messages();
+
+    }
+
+}
